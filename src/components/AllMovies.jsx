@@ -51,10 +51,10 @@ const AllMovies = () => {
       setFilteredMovies(filtered);
     };
     return (
-        <div className='mx-auto'>
+        <div id="Explore-Movie" className='w-full mx-auto'>
 
             <div className='text-5xl font-bold text-center text-yellow-500 my-10 drop-shadow-xl'>Explore Movies</div>
-      <div className=" my-10 py-5 w-4/6 filter-section mx-auto grid  grid-cols-1 lg:grid-cols-3">
+      <div className="container  mx-auto  my-10 py-5 w-11/12 lg:w-4/6  flex justify-around items-center flex-wrap gap-5">
   <div>
 
   <input   className='input input-bordered border-black px-8 rounded-md font-2xl font-normal'
@@ -157,7 +157,7 @@ const AllMovies = () => {
 )}
         <div> 
             
-        {movie.movielanguages.length > 0 && (
+        {movie.moviecountries.length > 0 && (
 <div>
 <strong>Countries:</strong> {movie.moviecountries.slice(0, 7).join(', ')}
 {movie.moviecountries.length > 7 && " ..."}
@@ -166,7 +166,7 @@ const AllMovies = () => {
             </div>
        
         <div> 
-        {movie.movielanguages.length > 0 && (
+        {movie.moviegenres.length > 0 && (
 <div>
 <strong>Genres: </strong> {movie.moviegenres.slice(0, 7).join(', ')}
 {movie.moviegenres.length > 7 && " ..."}

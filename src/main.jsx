@@ -15,6 +15,11 @@ const router = createBrowserRouter([
     element: <Home></Home>,
     
   },
+  {
+    path: "/exploreMovie",
+    element: <AllMovies></AllMovies>,
+    
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
