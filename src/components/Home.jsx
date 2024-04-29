@@ -4,7 +4,7 @@ import AllMovies from './AllMovies';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-[#000000]'>
           <Banner></Banner>
           <AllMovies></AllMovies>
         </div>

@@ -8,6 +8,7 @@ import {
 import './index.css'
 import AllMovies from './components/AllMovies';
 import Home from './components/Home';
+import MovieDetail from './components/MovieDetail';
 
 const router = createBrowserRouter([
   {
@@ -16,14 +17,15 @@ const router = createBrowserRouter([
     
   },
   {
-    path: "/exploreMovie",
-    element: <AllMovies></AllMovies>,
-    
-  },
+    path :"/movie/:id",
+    element : <MovieDetail></MovieDetail>,
+    loader : ()=> fetch('/movies.json'),
+},
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<React.StrictMode>
-    <RouterProvider router={router} />
+<React.StrictMode className="bg-black p-0">
+    <RouterProvider  router={router} />
   </React.StrictMode>
 )
